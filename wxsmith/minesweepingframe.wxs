@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="minesweepingFrame">
+		<title>Mine-Sweeping</title>
+		<size>336,311</size>
+		<style>wxCAPTION|wxDEFAULT_FRAME_STYLE|wxCLOSE_BOX|wxMINIMIZE_BOX</style>
+		<handler function="OnPaint" entry="EVT_PAINT" />
+		<handler function="OnLeftDown" entry="EVT_LEFT_DOWN" />
+		<handler function="OnRightDown" entry="EVT_RIGHT_DOWN" />
+		<handler function="OnRightUp" entry="EVT_RIGHT_UP" />
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;Game</label>
+				<object class="wxMenuItem" name="idMenuStart" variable="MenuItem3" member="yes">
+					<label>Start</label>
+					<accel>F5</accel>
+					<help>Start game</help>
+					<handler function="OnMenuStartSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuSettings" variable="MenuSettings" member="yes">
+					<label>Settings</label>
+					<accel>F3</accel>
+					<help>Game Settings</help>
+					<handler function="OnMenuSettintsSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuQuit" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuAbout" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>About this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>
